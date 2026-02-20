@@ -50,7 +50,7 @@
             // check if already downloaded
           let alreadyDownloaded = localStorage.getItem("easySensorsDownloaded");
 
-         if (alreadyDownloaded === "yes") {
+        if(alreadyDownloaded === "no"){} else if (alreadyDownloaded === "yes") {
            
                 downloadBtn.innerText = "Already Downloaded";
                 downloadBtn.disabled = true; 
@@ -3578,5 +3578,6 @@
 </body>
 
 </html>
+
 
 
