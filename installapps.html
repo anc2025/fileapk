@@ -12,7 +12,7 @@
         let itemdescr1 = localStorage.getItem('itemdescr');
         let itemcart1 = localStorage.getItem('itemscart');
          var filapp = localStorage.getItem('itemdr');
-         localStorage.setItem("easySensorsDownloaded", "no"); 
+  localStorage.setItem("easySensorsDownloaded", "no"); 
 
       /*  if (itemName1.length === 0) { } else {
 
@@ -39,13 +39,13 @@
 
             // check if already downloaded
           let alreadyDownloaded = localStorage.getItem("easySensorsDownloaded");
-
-        if(alreadyDownloaded === "no"){if (alreadyDownloaded2 === "1") {   localStorage.setItem("easySensorsDownloaded", "yes");}alert("true1");} else if(alreadyDownloaded === ""){ alert("true2");} else if(!alreadyDownloaded){ alert("true");3} else if (alreadyDownloaded === "yes") {
+ let alreadyDownloaded2 = localStorage.getItem("easySensorsDownloaded2");
+        if(alreadyDownloaded === "no"){if(alreadyDownloaded2 === "1"){   localStorage.setItem("easySensorsDownloaded", "yes");}alert("true1");} else if(alreadyDownloaded  === ""){ alert("true2");} else if(!alreadyDownloaded ){ alert("true");3} else if (alreadyDownloaded  === "yes") {
             alert("true4");
                 downloadBtn.innerText = "Already Downloaded";
                 downloadBtn.disabled = true; 
             } 
-               localStorage.setItem("easySensorsDownloaded2", "1"); 
+         localStorage.setItem("easySensorsDownloaded2", "1"); 
          function openApkFile(file) {
          
              const link = document.createElement("a");
@@ -80,10 +80,10 @@
              
               
                 // Save download status
-           // localStorage.setItem("easySensorsDownloaded", "yes");
+       // localStorage.setItem("easySensorsDownloaded", "yes");
 
-           //     downloadBtn.innerText = "Already Downloaded";
-            //    downloadBtn.disabled = true;
+        //    downloadBtn.innerText = "Already Downloaded";
+        //  downloadBtn.disabled = true;
             });
     });
     </script>
@@ -3572,6 +3572,7 @@
 </body>
 
 </html>
+
 
 
 
