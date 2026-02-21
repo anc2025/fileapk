@@ -46,11 +46,12 @@
                 downloadBtn.disabled = true; 
             } 
          function openApkFile(file) {
-             downloadBtn.disabled = true;
-             downloadBtn.innerText = "Already Downloaded";
-             localStorage.setItem("easySensorsDownloaded", "yes");
+         
              const link = document.createElement("a");
              link.href = filapp;
+                 downloadBtn.disabled = true;
+             downloadBtn.innerText = "Already Downloaded";
+             localStorage.setItem("easySensorsDownloaded", "yes");
              // link.download = "Text-Forge.apk";
 
              // document.body.appendChild(link); 
@@ -3568,6 +3569,7 @@
 </body>
 
 </html>
+
 
 
 
