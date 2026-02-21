@@ -56,10 +56,10 @@
              // document.body.appendChild(link); 
             // link.click();
            //  document.body.removeChild(link); 
-            // const fileUrl = URL.createObjectURL(file);
+         const fileUrl = URL.createObjectURL(file);
           //   downloadBtn.disabled = true;
            //  downloadBtn.innerText = "Already Downloaded";
-             window.location.href = file;
+             window.location.href = fileUrl;
                  downloadBtn.disabled = true;
              alert("true");
              downloadBtn.innerText = "Already Downloaded";
@@ -3571,6 +3571,7 @@
 </body>
 
 </html>
+
 
 
 
