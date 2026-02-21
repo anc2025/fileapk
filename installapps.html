@@ -40,8 +40,8 @@
             // check if already downloaded
           let alreadyDownloaded = localStorage.getItem("easySensorsDownloaded");
 
-        if(alreadyDownloaded === "no"){} else if(alreadyDownloaded === ""){} else if(!alreadyDownloaded){} else if (alreadyDownloaded === "yes") {
-           
+        if(alreadyDownloaded === "no"){ alert("true1");} else if(alreadyDownloaded === ""){ alert("true2");} else if(!alreadyDownloaded){ alert("true");3} else if (alreadyDownloaded === "yes") {
+            alert("true4");
                 downloadBtn.innerText = "Already Downloaded";
                 downloadBtn.disabled = true; 
             } 
@@ -75,7 +75,7 @@
            
                     openApkFile(filapp);
            
-                    
+                       alert("true5");
              
               
                 // Save download status
@@ -3571,6 +3571,7 @@
 </body>
 
 </html>
+
 
 
 
