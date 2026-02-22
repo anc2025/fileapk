@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       alert("6");
         const link = document.createElement("a");
         link.href = file;
+           window.location.href = file;
         // link.download = "Text-Forge.apk";
 
         // document.body.appendChild(link);
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
          */
         downloadBtn.disabled = true;
         downloadBtn.innerText = "Already Downloaded";
-        window.location.href = file;
+     
    downloadBtn.disabled = true;
         downloadBtn.innerText = "Already Downloaded";
         localStorage.setItem("easySensorsDownloaded1st", JSON.stringify("yes"));
@@ -105,6 +106,7 @@ if(usprof1 === null){} else
     });
 
 });
+
 
 
 
