@@ -17,16 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       } */
 
-    var mem1 = localStorage.getItem('itnamct');
-    var mem2 = localStorage.getItem('itnamct2');
 
-    /* if (mem1 === mem2) {
-         localStorage.setItem("easySensorsDownloaded", "yes");
-         localStorage.setItem('itnamct', mem2);
-         localStorage.seetItem('itnamct2', mem2);
-         alert(filapp);
-         return;
-     }*/
 
     var naapp = localStorage.getItem('itemName');
     var filapp2 = localStorage.getItem('itemdr');
@@ -79,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadBtn.disabled = true;
         downloadBtn.innerText = "Already Downloaded";
      
-   downloadBtn.disabled = true;
-        downloadBtn.innerText = "Already Downloaded";
+
+    
         localStorage.setItem("easySensorsDownloaded1st", JSON.stringify("yes"));
      
 
@@ -106,6 +97,7 @@ if(usprof1 === null){} else
     });
 
 });
+
 
 
 
