@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadBtn = document.getElementById("downloadBtn");
 
     // check if already downloaded
-    let alreadyDownloadedst = localStorage.getItem("easySensorsDownloaded1st");
+   var alreadyDownloadedst = localStorage.getItem("easySensorsDownloaded1st");
  const usprof = JSON.parse(alreadyDownloadedst);
     alert(usprof);
     if (usprof === "no") { } else if (usprof === "yes") {
@@ -89,20 +89,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Trigger APK download
 
-
-        openApkFile(usprof1);
+if(usprof1){
+        openApkFile(usprof1);}
 
 
 
 
         // Save download status
-        localStorage.setItem("easySensorsDownloaded1st",JSON.stringify("yes"));
+        //localStorage.setItem("easySensorsDownloaded1st",JSON.stringify("yes"));
 
-        downloadBtn.innerText = "Already Downloaded";
-        downloadBtn.disabled = true;
+       // downloadBtn.innerText = "Already Downloaded";
+       // downloadBtn.disabled = true;
     });
 
 });
+
 
 
 
