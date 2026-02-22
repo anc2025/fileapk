@@ -89,8 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Trigger APK download
 
-if(usprof1){
-        openApkFile(usprof1);}
+if(usprof1 === null){} else
+{
+    openApkFile(usprof1);
+}
 
 
 
@@ -103,6 +105,7 @@ if(usprof1){
     });
 
 });
+
 
 
 
