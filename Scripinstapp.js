@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
      }*/
 
     var naapp = localStorage.getItem('itemName');
-    var filapp = localStorage.getItem('itemdr');
+    var filapp2 = localStorage.getItem('itemdr');
 
     // const fileUrl = URL.createObjectURL(filapp);
 
     // window.location.href = fileUrl;
     const link = document.createElement("a");
-    link.href = filapp;
+    link.href = usprof1;
 
   
     const downloadBtn = document.getElementById("downloadBtn");
@@ -101,5 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
 
