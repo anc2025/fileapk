@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let itemdescr1 = localStorage.getItem('itemdescr');
     let itemcart1 = localStorage.getItem('itemscart');
     var filapp = localStorage.getItem('itemdirc');
-    alert("1");
+
  const usprof1 = JSON.parse(filapp);
- alert("2");
+
     /*  if (itemName1.length === 0) { } else {
 
           document.querySelector('#single-product-title').innerHTML = itemName1;
@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var naapp = localStorage.getItem('itemName');
     var filapp2 = localStorage.getItem('itemdr');
- alert("3");
+
     // const fileUrl = URL.createObjectURL(filapp);
 
     // window.location.href = fileUrl;
     const link = document.createElement("a");
     link.href = usprof1;
- alert("4");
+
   
     const downloadBtn = document.getElementById("downloadBtn");
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadBtn.innerText = "Already Downloaded";
         downloadBtn.disabled = true;
     }
-     alert("5");
+   
     function openApkFile(file) {
       alert("6");
         const link = document.createElement("a");
@@ -70,21 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadBtn.disabled = true;
         downloadBtn.innerText = "Already Downloaded";
      
-
-    
         localStorage.setItem("easySensorsDownloaded1st", JSON.stringify("yes"));
-     
-
-
-    }
+     }
     downloadBtn.addEventListener("click", function () {
 
         // Trigger APK download
 
-if(usprof1 === null){} else
-{
     openApkFile(usprof1);
-}
+
 
 
 
@@ -97,6 +90,7 @@ if(usprof1 === null){} else
     });
 
 });
+
 
 
 
