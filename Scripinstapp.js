@@ -36,13 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const link = document.createElement("a");
     link.href = filapp;
 
-    //  link.download = "TextForge.apk";
-    //  window.location.href = "applications/textforge/TextForge.apk";
+  
     const downloadBtn = document.getElementById("downloadBtn");
 
     // check if already downloaded
     let alreadyDownloadedst = localStorage.getItem("easySensorsDownloaded1st");
  const usprof = JSON.parse(alreadyDownloadedst);
+    alert(usprof);
     if (usprof === "no") { } else if (usprof === "yes") {
 
         downloadBtn.innerText = "Already Downloaded";
@@ -101,4 +101,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
