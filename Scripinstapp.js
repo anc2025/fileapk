@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let itemdescr1 = localStorage.getItem('itemdescr');
     let itemcart1 = localStorage.getItem('itemscart');
     var filapp = localStorage.getItem('itemdirc');
- const usprof = JSON.parse(filapp);
+ const usprof1 = JSON.parse(filapp);
 
     /*  if (itemName1.length === 0) { } else {
 
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Trigger APK download
 
 
-        openApkFile(usprof);
+        openApkFile(usprof1);
 
 
 
@@ -101,3 +101,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
