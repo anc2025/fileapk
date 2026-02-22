@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let itemPrice1 = localStorage.getItem('itemPrice');
     let itemdescr1 = localStorage.getItem('itemdescr');
     let itemcart1 = localStorage.getItem('itemscart');
-    var filapp = localStorage.getItem('itemdr');
-
+    var filapp = localStorage.getItem('itemdirc');
+ const usprof = JSON.parse(filapp);
 
     /*  if (itemName1.length === 0) { } else {
 
@@ -41,19 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadBtn = document.getElementById("downloadBtn");
 
     // check if already downloaded
-    let alreadyDownloaded = localStorage.getItem("easySensorsDownloaded");
-
-    if (alreadyDownloaded === "no") { } else if (alreadyDownloaded === "yes") {
+    let alreadyDownloadedst = localStorage.getItem("easySensorsDownloaded1st");
+ const usprof = JSON.parse(alreadyDownloadedst);
+    if (usprof === "no") { } else if (usprof === "yes") {
 
         downloadBtn.innerText = "Already Downloaded";
         downloadBtn.disabled = true;
     }
     function openApkFile(file) {
-        downloadBtn.disabled = true;
-        downloadBtn.innerText = "Already Downloaded";
-        localStorage.setItem("easySensorsDownloaded", "yes");
+     
         const link = document.createElement("a");
-        link.href = filapp;
+        link.href = file;
         // link.download = "Text-Forge.apk";
 
         // document.body.appendChild(link);
@@ -77,9 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
          */
         downloadBtn.disabled = true;
         downloadBtn.innerText = "Already Downloaded";
-        window.location.href = filapp;
-
-        localStorage.setItem("easySensorsDownloaded", "yes");
+        window.location.href = file;
+   downloadBtn.disabled = true;
+        downloadBtn.innerText = "Already Downloaded";
+        localStorage.setItem("easySensorsDownloaded1st", JSON.stringify("yes"));
+     
 
 
     }
@@ -88,15 +88,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Trigger APK download
 
 
-        openApkFile(filapp);
+        openApkFile(usprof);
 
 
 
 
         // Save download status
-        localStorage.setItem("easySensorsDownloaded", "yes");
+        localStorage.setItem("easySensorsDownloaded1st",JSON.stringify("yes"));
 
         downloadBtn.innerText = "Already Downloaded";
         downloadBtn.disabled = true;
     });
+
 });
