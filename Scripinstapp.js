@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // check if already downloaded
    var alreadyDownloadedst = localStorage.getItem("easySensorsDownloaded1st");
- const usprof = JSON.parse(alreadyDownloadedst);
+ var usprof = JSON.parse(alreadyDownloadedst);
     alert(usprof);
     if (usprof === "no") { } else if (usprof === "yes") {
 
@@ -106,6 +106,7 @@ if(usprof1 === null){} else
     });
 
 });
+
 
 
 
