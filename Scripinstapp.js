@@ -15,12 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Check download status
     let downloadStatus = localStorage.getItem("easySensorsDownloaded1st");
- var usprof = JSON.parse(downloadStatus);
+ var usprof = downloadStatus ? JSON.parse(downloadStatus) : null;
     // If first time (no value stored)
-   /* if (downloadStatus === null) {
-        localStorage.setItem("easySensorsDownloaded1st", "no");
+ if (usprof === null) {
+        localStorage.setItem("easySensorsDownloaded1st", JSON.stringify("no"));
         downloadStatus = "no";
-    } */
+        usprof = "no";
+    } 
 
    // alert("Download status: " + downloadStatus);
 
@@ -151,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });*/
 
 });
+
 
 
 
