@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openApkFile(file) {
 
- /*       if (!file) {
+     if (!file) {
             alert("File not found!");
             return;
-        } */
+        } 
 
         // Start download
         const link = document.createElement("a");
@@ -154,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });*/
 
 });
+
 
 
 
