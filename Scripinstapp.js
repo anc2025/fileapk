@@ -67,10 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
          const name = urlParams.get('name');
           const id = urlParams.get('id');
          */
-        downloadBtn.disabled = true;
+        if(file){
+                 downloadBtn.disabled = true;
         downloadBtn.innerText = "Already Downloaded";
      
         localStorage.setItem("easySensorsDownloaded1st", JSON.stringify("yes"));
+        }
+   
      }
     downloadBtn.addEventListener("click", function () {
 
@@ -90,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
 
 
