@@ -4,10 +4,61 @@ document.addEventListener('DOMContentLoaded', () => {
     let itemPrice1 = localStorage.getItem('itemPrice');
     let itemdescr1 = localStorage.getItem('itemdescr');
     let itemcart1 = localStorage.getItem('itemscart');
-    var filapp = localStorage.getItem('itemdirc');
+ 
+ 
 
- const usprof1 = JSON.parse(filapp);
-    i=0;
+    // Get file path
+    const filapp = localStorage.getItem('itemdirc');
+    const filePath = filapp ? JSON.parse(filapp) : null;
+
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    // Check download status
+    let downloadStatus = localStorage.getItem("easySensorsDownloaded1st");
+
+    // If first time (no value stored)
+    if (downloadStatus === null) {
+        localStorage.setItem("easySensorsDownloaded1st", "no");
+        downloadStatus = "no";
+    }
+
+    alert("Download status: " + downloadStatus);
+
+    // If already downloaded
+    if (downloadStatus === "yes") {
+        downloadBtn.innerText = "Already Downloaded";
+        downloadBtn.disabled = true;
+    }
+
+    function openApkFile(file) {
+
+        if (!file) {
+            alert("File not found!");
+            return;
+        }
+
+        // Start download
+        const link = document.createElement("a");
+        link.href = file;
+        link.download = "";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Update status
+        localStorage.setItem("easySensorsDownloaded1st", "yes");
+
+        downloadBtn.disabled = true;
+        downloadBtn.innerText = "Already Downloaded";
+    }
+
+    downloadBtn.addEventListener("click", function () {
+        openApkFile(filePath);
+    });
+
+
+
+ /*   i=0;
     if(i = 0){
      localStorage.setItem("easySensorsDownloaded1st", JSON.stringify("no"));
     }
@@ -22,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    var naapp = localStorage.getItem('itemName');
+ /*   var naapp = localStorage.getItem('itemName');
     var filapp2 = localStorage.getItem('itemdr');
 
     // const fileUrl = URL.createObjectURL(filapp);
@@ -70,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
          const name = urlParams.get('name');
           const id = urlParams.get('id');
          */
-   i=i+1;
+ /*  i=i+1;
                  downloadBtn.disabled = true;
         downloadBtn.innerText = "Already Downloaded";
      
@@ -92,9 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
        // downloadBtn.innerText = "Already Downloaded";
        // downloadBtn.disabled = true;
-    });
+    });*/
 
 });
+
 
 
 
