@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
  
 
     // Get file path
-    const filapp = localStorage.getItem('itemdirc');
-    const filePath = filapp ? JSON.parse(filapp) : null;
+    var filapp = localStorage.getItem('itemdirc');
+    var filePath = filapp ? JSON.parse(filapp) : null;
 
     const downloadBtn = document.getElementById("downloadBtn");
 
@@ -43,20 +43,22 @@ document.addEventListener('DOMContentLoaded', () => {
         link.href = file;
         
 
-                localStorage.setItem("easySensorsDownloaded1st",  JSON.stringify("yes"));
-
-        downloadBtn.disabled = true;
+           
             window.location.href = file;
-       document.body.appendChild(link);
+     /*  document.body.appendChild(link);
         link.click(); 
         document.body.removeChild(link); 
-
+*/
         // Update status
+     localStorage.setItem("easySensorsDownloaded1st",  JSON.stringify("yes"));
 
+        downloadBtn.disabled = true;
         downloadBtn.innerText = "Already Downloaded";
     }
 
     downloadBtn.addEventListener("click", function () {
+          var filapp = localStorage.getItem('itemdirc');
+    var filePath = filapp ? JSON.parse(filapp) : null;
         if(filePath){
         openApkFile(filePath);
         }
@@ -152,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });*/
 
 });
+
 
 
 
