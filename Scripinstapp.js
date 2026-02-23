@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadBtn = document.getElementById("downloadBtn");
 
     // Check download status
-    let downloadStatus = localStorage.getItem("easySensorsDownloaded1st");
+  var downloadStatus = localStorage.getItem("easySensorsDownloaded1st");
  var usprof = downloadStatus ? JSON.parse(downloadStatus) : null;
     // If first time (no value stored)
  if (usprof === null) {
@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });*/
 
 });
+
 
 
 
