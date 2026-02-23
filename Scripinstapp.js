@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     var filapp = localStorage.getItem('itemdirc');
 
  const usprof1 = JSON.parse(filapp);
-
+    i=0;
+    if(i = 0){
+     localStorage.setItem("easySensorsDownloaded1st", JSON.stringify("no"));
+    }
     /*  if (itemName1.length === 0) { } else {
 
           document.querySelector('#single-product-title').innerHTML = itemName1;
@@ -67,13 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
          const name = urlParams.get('name');
           const id = urlParams.get('id');
          */
-        if(file){
+   i=i+1;
                  downloadBtn.disabled = true;
         downloadBtn.innerText = "Already Downloaded";
      
         localStorage.setItem("easySensorsDownloaded1st", JSON.stringify("yes"));
-        }
-   
+    
      }
     downloadBtn.addEventListener("click", function () {
 
@@ -93,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
 
 
