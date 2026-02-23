@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get file path
     const filapp = localStorage.getItem('itemdirc');
     const filePath = filapp ? JSON.parse(filapp) : null;
-
+alert(filePath);
     const downloadBtn = document.getElementById("downloadBtn");
 
     // Check download status
@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });*/
 
 });
+
 
 
 
