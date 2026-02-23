@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Check download status
     let downloadStatus = localStorage.getItem("easySensorsDownloaded1st");
-
+ var usprof = JSON.parse(downloadStatus);
     // If first time (no value stored)
    /* if (downloadStatus === null) {
         localStorage.setItem("easySensorsDownloaded1st", "no");
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
    // alert("Download status: " + downloadStatus);
 
     // If already downloaded
-    if (downloadStatus === "yes") {
+    if (usprof === "yes") {
         downloadBtn.innerText = "Already Downloaded";
         downloadBtn.disabled = true;
     }
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.href = file;
         
 
-                localStorage.setItem("easySensorsDownloaded1st", "yes");
+                localStorage.setItem("easySensorsDownloaded1st",  JSON.stringify("yes"));
 
         downloadBtn.disabled = true;
             window.location.href = file;
@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });*/
 
 });
+
 
 
 
