@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
    var alreadyDownloadedst = localStorage.getItem("easySensorsDownloaded1st");
  var usprof = JSON.parse(alreadyDownloadedst);
     alert(usprof);
-    if (usprof === "no") { } else if (usprof === "yes") {
+    if (usprof === "no") { } else  {
 
         downloadBtn.innerText = "Already Downloaded";
         downloadBtn.disabled = true;
     }
-   
+   // if (usprof === "yes")
     function openApkFile(file) {
       alert("6");
         const link = document.createElement("a");
@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
 
 
