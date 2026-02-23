@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadStatus = "no";
         usprof = "no";
     } 
-
+    alert("Download status: " + downloadStatus);
    // alert("Download status: " + downloadStatus);
 
     // If already downloaded
@@ -154,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });*/
 
 });
+
 
 
 
