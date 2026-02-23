@@ -10,19 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get file path
     const filapp = localStorage.getItem('itemdirc');
     const filePath = filapp ? JSON.parse(filapp) : null;
-alert(filePath);
+
     const downloadBtn = document.getElementById("downloadBtn");
 
     // Check download status
     let downloadStatus = localStorage.getItem("easySensorsDownloaded1st");
 
     // If first time (no value stored)
-    if (downloadStatus === null) {
+   /* if (downloadStatus === null) {
         localStorage.setItem("easySensorsDownloaded1st", "no");
         downloadStatus = "no";
-    }
+    } */
 
-    alert("Download status: " + downloadStatus);
+   // alert("Download status: " + downloadStatus);
 
     // If already downloaded
     if (downloadStatus === "yes") {
@@ -32,10 +32,10 @@ alert(filePath);
 
     function openApkFile(file) {
 
-        if (!file) {
+ /*       if (!file) {
             alert("File not found!");
             return;
-        }
+        } */
 
         // Start download
         const link = document.createElement("a");
@@ -147,6 +147,7 @@ alert(filePath);
     });*/
 
 });
+
 
 
 
