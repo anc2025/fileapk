@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start download
         const link = document.createElement("a");
         link.href = file;
-        link.download = "";
+    link.download = "";
             window.location.href = file;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+       /*     document.body.appendChild(link);
+        link.click(); 
+        document.body.removeChild(link); */
 
         // Update status
         localStorage.setItem("easySensorsDownloaded1st", "yes");
@@ -147,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });*/
 
 });
+
 
 
 
