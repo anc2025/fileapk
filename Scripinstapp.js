@@ -40,21 +40,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start download
         const link = document.createElement("a");
         link.href = file;
-    link.download = "";
+        
+
+                localStorage.setItem("easySensorsDownloaded1st", "yes");
+
+        downloadBtn.disabled = true;
             window.location.href = file;
        /*     document.body.appendChild(link);
         link.click(); 
         document.body.removeChild(link); */
 
         // Update status
-        localStorage.setItem("easySensorsDownloaded1st", "yes");
 
-        downloadBtn.disabled = true;
         downloadBtn.innerText = "Already Downloaded";
     }
 
     downloadBtn.addEventListener("click", function () {
+        if(filePath){
         openApkFile(filePath);
+        }
     });
 
 
@@ -147,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });*/
 
 });
+
 
 
 
