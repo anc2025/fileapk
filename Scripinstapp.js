@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadStatus = "no";
         usprof = "no";
     } */
-    alert("Download status: " + downloadStatus);
+    alert("Download status: " + usprof);
    // alert("Download status: " + downloadStatus);
 
     // If already downloaded
@@ -59,15 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
     downloadBtn.addEventListener("click", function () {
           var filapp = localStorage.getItem('itemdirc');
     var filePath = filapp ? JSON.parse(filapp) : null;
-        if(filePath){
+      
         openApkFile(filePath);
-        }
+   
     });
 
 
 
 
 });
+
 
 
 
