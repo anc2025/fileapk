@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get file path
     var filapp = localStorage.getItem('itemdirc');
-    var filePath = filapp ? JSON.parse(filapp) : null;
+    var filePath =JSON.parse(filapp);
 
     const downloadBtn = document.getElementById("downloadBtn");
 
@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openApkFile(file) {
 
-     if (!file) {
+  /*   if (!file) {
             alert("File not found!");
             return;
-        } 
+        } */
 
         // Start download
         const link = document.createElement("a");
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     downloadBtn.addEventListener("click", function () {
           var filapp = localStorage.getItem('itemdirc');
-    var filePath = filapp ? JSON.parse(filapp) : null;
+    var filePath =  JSON.parse(filapp);
       
         openApkFile(filePath);
    
@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
 
 
