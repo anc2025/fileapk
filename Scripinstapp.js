@@ -14,8 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadBtn = document.getElementById("downloadBtn");
 
     // Check download status
-  var downloadStatus = localStorage.getItem("easySensorsDownloaded1st");
- var usprof = downloadStatus ? JSON.parse(downloadStatus) : null;
+//  var downloadStatus = localStorage.getItem("easySensorsDownloaded1st");
+// var usprof = downloadStatus ? JSON.parse(downloadStatus) : null;
+    const queryString = window.location.search;
+
+// Extract parameters
+const urlParams = new URLSearchParams(queryString);
+   var downloadStatus = urlParams.get('sellaut') 
+         const usprof = downloadStatus ? downloadStatus : null;
+    var filapp = urlParams.get('sdinst');
+       
+         */
     // If first time (no value stored)
 /* if (usprof === null) {
         localStorage.setItem("easySensorsDownloaded1st", JSON.stringify("no"));
@@ -57,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     downloadBtn.addEventListener("click", function () {
-          var filapp = localStorage.getItem('itemdirc');
-    var filePath =  JSON.parse(filapp);
-      
-        openApkFile(filePath);
+        //  var filapp = localStorage.getItem('itemdirc');
+  //  var filePath =  JSON.parse(filapp);
+          var filapp = urlParams.get('sdinst');
+        openApkFile(filapp);
    
     });
 
@@ -68,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
 
 
