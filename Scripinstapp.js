@@ -23,7 +23,7 @@ const urlParams = new URLSearchParams(queryString);
    var downloadStatus = urlParams.get('sellaut') 
          const usprof = downloadStatus ? downloadStatus : null;
     var filapp = urlParams.get('sdinst');
-       
+       alert(usprof);
          */
     // If first time (no value stored)
 /* if (usprof === null) {
@@ -77,6 +77,7 @@ const urlParams = new URLSearchParams(queryString);
 
 
 });
+
 
 
 
