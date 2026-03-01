@@ -32,7 +32,7 @@ const urlParams = new URLSearchParams(queryString);
         usprof = "no";
     } */
     alert("Download status: " + usprof);
-   // alert("Download status: " + downloadStatus);
+  alert("Download status: " + downloadStatus);
 
     // If already downloaded
     if (usprof === "yes") {
@@ -77,6 +77,7 @@ const urlParams = new URLSearchParams(queryString);
 
 
 });
+
 
 
 
