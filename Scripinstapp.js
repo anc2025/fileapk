@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let itemName1 = localStorage.getItem('itemName');
+      alert("0");
+/*    let itemName1 = localStorage.getItem('itemName');
     let itemImage1 = localStorage.getItem('itemImage');
     let itemPrice1 = localStorage.getItem('itemPrice');
     let itemdescr1 = localStorage.getItem('itemdescr');
-    let itemcart1 = localStorage.getItem('itemscart');
+    let itemcart1 = localStorage.getItem('itemscart');*/
        alert("1");
     // Get file path
     var filapp = localStorage.getItem('itemdirc');
@@ -82,6 +83,7 @@ const urlParams = new URLSearchParams(queryString);
 
 
 });
+
 
 
 
