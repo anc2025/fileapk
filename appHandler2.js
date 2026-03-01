@@ -154,3 +154,4 @@ function clearAllItems(userCart) {
 
     updateTotalPrice(0, "clearAllItems");
 }
+});
