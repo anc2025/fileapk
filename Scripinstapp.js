@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-      alert("0");
+          alert("0");
 /*    let itemName1 = localStorage.getItem('itemName');
     let itemImage1 = localStorage.getItem('itemImage');
     let itemPrice1 = localStorage.getItem('itemPrice');
@@ -83,6 +83,7 @@ const urlParams = new URLSearchParams(queryString);
 
 
 });
+
 
 
 
