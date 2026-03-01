@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    alert("a");
+
     // NAV SCROLL: SHADOW SHOW/HIDE
     let navElement = document.querySelector('nav');
     document.addEventListener('scroll', () => {navScrollEffect(navElement)});
