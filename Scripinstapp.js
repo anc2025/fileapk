@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Extract parameters
 const urlParams = new URLSearchParams(queryString);
    var downloadStatus = urlParams.get('sellaut') 
-         const usprof = downloadStatus ? downloadStatus : null;
-    var filapp = urlParams.get('sdinst');
+         const usprof = downloadStatus ? JSON.parse(decodeURIComponent(downloadStatus)) : null;
+
        alert(usprof);
          */
     // If first time (no value stored)
@@ -68,8 +68,14 @@ const urlParams = new URLSearchParams(queryString);
     downloadBtn.addEventListener("click", function () {
         //  var filapp = localStorage.getItem('itemdirc');
   //  var filePath =  JSON.parse(filapp);
+           const queryString = window.location.search;
+
+// Extract parameters
+const urlParams = new URLSearchParams(queryString);
+
           var filapp = urlParams.get('sdinst');
-        openApkFile(filapp);
+         const files = filapp ? JSON.parse(decodeURIComponent(filapp)) : null;
+        openApkFile(files);
    
     });
 
@@ -77,6 +83,7 @@ const urlParams = new URLSearchParams(queryString);
 
 
 });
+
 
 
 
