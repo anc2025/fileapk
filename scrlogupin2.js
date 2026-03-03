@@ -169,7 +169,7 @@ function resetall(){
 
 
 }
-}
+
 function remake(){
   if (!lastState) return;
   if( c1.id=="container" && c2.id=="container2"){
@@ -352,7 +352,7 @@ event.preventDefault();
     const blockB = document.getElementById("container2"); 
     if (lastState){remake();
       return;
-    }
+                  }
      blockB.innerHTML='<div class="overlay-container"><div class="overlay"><div class="overlay-panel overlay-left"><h2>Welcome back</h2><p>To keep connected with us please ligin with your info.</p><button id="signIn2" class="ghost"  onclick="submitForm2()">Sign In</button></div></div></div>';
   blockA.innerHTML='<div class="form-container sign-up-container"><form id="contactForm" onsubmit="submitForm(event), submitFormdata(event)"><h2>Create account</h2><div class="social-container"><a href="#" class="social"><img id="iga1" src="facebook.svg"></a><!--class="fa-brands fa-facebook"--><a href="#" class="social"><img id="iga2" src="google.svg"  ></a> <!--class="fa-brands fa-google" --><a href="#" class="social"><img id="iga3" src="linkedin.svg"  ></a> <!--class="fa-brands fa-linkedin"--></div><span>or use your email</span><div class="form-group"><img src="user.svg" ><input type="text" placeholder="name" id="name" required></div><div class="form-group"><img src="envelope.svg" ><input type="email" placeholder="Email" id="email" required></div><div class="form-group"><img src="lock.svg"><input type="password" placeholder="text" id="registerPassword1" name="password" rows="1" required></div><div class="form-group"><img src="arrow-left-rotate.svg" ><input type="text" placeholder="password"  id="registerPassword2" required></div><div class="password-strength"><div class="strength-bar"></div></div><button  type="submit"  id="signUp">Sign Up</button><div id="response">  <span id="pageInfo"></span></div></form></div>';
   
@@ -418,3 +418,4 @@ supabase.auth.onAuthStateChange((_event, session) => {
       user.app_metadata?.provider || "email";
   }
 });
+
