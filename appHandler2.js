@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.order-button').forEach((bttn) => {
         bttn.addEventListener('click', () => {addToCart(userCart, bttn)})
-    })
+    });
 
     // CART SCROLL EFFECT
     userCart.addEventListener('scroll', () => {cartScrollEffect(userCart)});
@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (targetElement) {
             removeCartItem(targetElement)
         }
-    })
+    });
 
     // CLEAR ALL ITEMS
     document.querySelector('#checkout-button').addEventListener('click', () => {clearAllItems(userCart)});
 
     emptyCartMessage()
-})
+});
 
 // NAV SCROLL 
 function navScrollEffect(navElement) {
@@ -128,7 +128,7 @@ function updateTotalPrice(itemPrice, operation) {
 function emptyCartMessage() {
     let message = document.querySelector('#cart-items-container .empty-cart-message');
 
-    message.style.display = (document.querySelectorAll('#cart-items-container ul li').length === 0) ? 'block' : 'none'
+    message.style.display = (document.querySelectorAll('#cart-items-container ul li').length === 0) ? 'block' : 'none';
 }
 
 // NEW ITEM ANIMATION
